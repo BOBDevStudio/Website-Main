@@ -2,27 +2,142 @@ remote_theme: "BOBDevStudio/Minimal-Mistakes-Fork-Theme"
 
 # --//Main customisation:
 
-title: "BOB Development Studio Website"
-description: "This is the official web for the Roblox group called BOB Development Studio"
+logo: "/Assets/Images/Page-Icons/Page-Icon.png"
+tab_icon: "/Assets/Images/Page-Icons/Page-Icon.png"
+redirect_update_logs_category: true
+color_images_base_path: "/Assets/Images/Colors/"
+color_images_file_type: "png"
 name: "BOB Development Studio"
+remade_author_panel_enabled: false
+
+# In order for a page category to be listed in a page's title there must be a homepage for that category and a name defined in the table below.
+page_category_names:
+  
+page_subject_info_panel_defaults:
+  color: "#a3a2a5"
+  titles_text_color: "#FFFFFF"
+
+# Disables or enables new or old major website features.
+enabled_features:
+  new_footer: true
+  old_footer: false
 
 exclude:
   - Readme.md
-  - .github
   - License
+  - .github
+
+# --//Page defaults:
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: single
+      uses_image_header: false
+      author: "BOBDevStudio"
+      author_profile: false
+      related: false
+      navigation_buttons: false
+      comments: false
+      is_update_log: false
+      is_post: false
+      only_list_update_logs: false
+      published_time_uses_pst: false
+      published_time_uses_pdt: false
+      pinned: false
+      listed: true
+      locked: false # This is technically wrong but this is supposed to be used if the issue behind the comments gets locked
+      update_log_listed: false
+      preview_image_path: "/Assets/Images/Page-Previews/Unset.png"
+      post_status_icons_visible: false
+      show_footer: true
+      sidebars:
+        table_of_contents:
+          enabled: false
+      set_notices:
+      outside_preview:
+        site_title: "BOB Development Studio Official Website"
+        page_title_appended_text: " - BDS's Website"
+        description: "This is the official website for the Roblox group called BOB Development Studio"
+        default_image: "/Assets/Images/Outside-Default-Icon.png"
+        logo:
+          path: "/Assets/Images/Page-Icons/Page-Icon.svg"
+          color: "#078599"
+        twitter:
+          owner_username: "TheBOBDevStudio"
+          writer_username: "TheBOBDevStudio"
+#  - scope:
+#      path: ""
+#      type: pages
+#    values:
+#      
+  - scope:
+      path: "Main/*"
+      type: pages
+    values:
+      sidebars:
+        page_navigation_panel:
+          list_name_used: "Main"
+        table_of_contents:
+          enabled: true
+      page_categories:
+        wiki_page: true
+  - scope:
+      path: ""
+      type: posts
+    values:
+      is_post: true
+      author_profile: true
+      related: true
+      post_status_icons_visible: true
+      sidebars:
+        table_of_contents:
+          enabled: true
 
 # --//Plugin related stuff:
 
 safe: true
 plugins:
-#  - jekyll-feed
+  - jekyll-feed
   - jekyll-include-cache
   - jekyll-redirect-from
-#  - jekyll-gist
+  - jekyll-gist
 #  - jekyll-sitemap
 whitelist:
-#  - jekyll-feed
+  - jekyll-feed
   - jekyll-include-cache
   - jekyll-redirect-from
-#  - jekyll-gist
+  - jekyll-gist
 #  - jekyll-sitemap
+
+# --//Comment settings:
+
+#repository: "BOBDevStudio/RBAP-Wiki-Comments"
+#comments:
+#  provider: "utterances"
+#  utterances:
+#    theme: "github-light" # Can be set to "github-light" or "github-dark"
+#    issue_term: "pathname"
+
+# --//Search settings:
+
+search: false # Was set to true
+#search_full_content: true
+#search_provider: "lunr"
+
+# --//No need to edit really:
+
+strict_front_matter: true
+incremental: false
+locale: "en-US"
+sass:
+  style: "expanded"
+atom_feed:
+  hide: true
+category_archive:
+  type: liquid
+  path: /posts/list/categories
+tag_archive:
+  type: liquid
+  path: /posts/list/tags

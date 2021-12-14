@@ -1,0 +1,17 @@
+main:
+  - title: "Home"
+    url: "/"
+  - title: "RBAP"
+    url: "/rbap"
+
+Main:
+  - title: "BOB Development Studio"
+    url: "/bds"
+    children:
+      - title: "Games"
+        url: "/bds#games"
+        children:
+          - title: "Random Buildings And Parts"
+            url: "/bds#random-buildings-and-parts"
+          - title: "Techtation"
+            url: "/bds#techtation"

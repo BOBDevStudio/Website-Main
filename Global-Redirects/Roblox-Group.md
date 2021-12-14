@@ -1,5 +1,5 @@
 ---
 permalink: /roblox
-title: "Going to our Roblox group"
+title: "Going to BDS on Roblox"
 redirect_to: "https://www.roblox.com/groups/8499452/-"
 ---
